@@ -1,6 +1,9 @@
-#frontend 
+#frontend
+
+.idea/workspace.xml
 
 /frontend/node_modules
+/frontend/build
 
 #backend
 
