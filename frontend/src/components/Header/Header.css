@@ -7,13 +7,16 @@
     width: 400px;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
     text-decoration: none;
     color: black;
 }
 
-.Header_link:hover {
+.Header_link__title {
+    font-size: 24px;
+}
 
+.Header_link__title:hover {
+    text-decoration: underline;
 }
 
 .Header_link__img {
