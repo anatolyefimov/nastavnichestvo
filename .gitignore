@@ -10,3 +10,8 @@
 /backend/venv
 *.pyc 
 db.sqlite3
+
+#pycharm
+/build/
+.idea/
+
