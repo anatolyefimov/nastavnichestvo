@@ -8,3 +8,5 @@
 #backend
 
 /backend/venv
+*.pyc 
+db.sqlite3
