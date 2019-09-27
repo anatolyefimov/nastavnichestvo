@@ -3,7 +3,7 @@
     width: 100%;
     height: 100px;
     display: flex;
-    position: fixed;
+    /*position: fixed;*/
 }
 
 .Header_link {
@@ -13,18 +13,27 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+}
+
+.Header_link__black {
     color: black;
 }
 
 .Header_title {
-    font-size: 24px;
     margin: 0;
+}
+
+.Header_title__size-big {
+    font-size: 24px;
 }
 
 .Header_title-about {
     margin: 0;
-    font-size: 18px;
     align-self: flex-end;
+}
+
+.Header_title-about__size-small {
+    font-size: 18px;
 }
 
 .Header_img {
@@ -48,12 +57,19 @@
 
 .Header_navlinks {
     text-decoration: none;
-    color: black;
     display: inline-block;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-right: 30px;
+}
+
+.Header_navlinks__size-small {
     font-size: 18px;
     padding: 10px;
-    border: 1px solid black;
-    margin-right: 30px;
+}
+
+.Header_navlinks__color {
+    color: black;
 }
 
 .Header_navlinks:last-of-type {
