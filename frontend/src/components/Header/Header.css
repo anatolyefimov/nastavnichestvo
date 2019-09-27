@@ -1,0 +1,23 @@
+.Header {
+    height: 200px;
+}
+
+.Header_link {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    text-decoration: none;
+    color: black;
+}
+
+.Header_link:hover {
+
+}
+
+.Header_link__img {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+}
