@@ -1,3 +1,43 @@
-from django.shortcuts import render
+from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth import authenticate
+from django.http import HttpResponse
+from django.core.exceptions import ObjectDoesNotExist
 
-# Create your views here.
+import json
+
+import json
+
+@csrf_exempt
+def register(request): 
+    req = json.loads(request.body)
+    res = {
+        'status': 'already exists'
+    }
+    try:
+        user = User.objects.get(username=req['username'])
+    except ObjectDoesNotExist:
+        res['status'] = 'ok';
+    
+    if (res['status'] == 'ok'):
+        User.objects.create_user(req['username'], req['username'], req['password'])
+    
+    res = json.dumps(res)
+
+    return HttpResponse(res, content_type='application/json')
+
+@csrf_exempt
+def login(request):
+    req = json.loads(request.body)
+    res = {
+        'status': 'ok'
+    }
+    
+    user = authenticate(username=req['username'], password=req['password'])
+    if user is None:
+        res['status'] = 'ivalid username or password'
+    
+    res = json.dumps(res)
+
+    return HttpResponse(res, content_type='application/json')
+
