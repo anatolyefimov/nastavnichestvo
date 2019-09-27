@@ -39,6 +39,8 @@
 
 .registry-form_input__size-big {
     width: 1000%;
+    line-height: 32px;
+    font-size: 20px;
 }
 
 .registry-form_input__size-m {

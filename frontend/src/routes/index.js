@@ -1,5 +1,10 @@
 const routes = [
     {
+        id: 0,
+        path: '/',
+        text: 'На главную',
+    },
+    {
         id: 1,
         path: '/join',
         text: 'Присоединиться',
