@@ -7,6 +7,10 @@ import logo from './logo.png'
 
 import routes from 'routes'
 
+function toggle() {
+    document.querySelector('.Header_links-container').classList.toggle('Header_links-container__visible');
+}
+
 function Header() {
     const links = routes.map(r =>
         <NavLink key={r.id} className="Header_navlinks Header_navlinks__size-small Header_navlinks__color" to={r.path}>{r.text}</NavLink>
@@ -24,6 +28,9 @@ function Header() {
             </a>
             <div className="Header_links-container">
                 {links}
+            </div>
+            <div className="Header_switch-hamburger" onClick={toggle}>
+                +
             </div>
         </div>
     );
