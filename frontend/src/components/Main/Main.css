@@ -30,4 +30,22 @@
 
 .mentoring_title {
     margin: 0;
+    line-height: 50px;
+    border-bottom: 1px solid grey;
+}
+
+@media (max-width: 500px) {
+    .about_popup {
+        font-size: .7em;
+        padding: 0;
+    }
+    .about_popup h2 {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .mentoring_title {
+        border-bottom: 1px solid grey;
+        text-align: center;
+        font-size: .8em;
+    }
 }
