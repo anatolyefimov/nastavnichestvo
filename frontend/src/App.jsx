@@ -19,7 +19,7 @@ class App extends React.Component {
                 <Route path="/join" component={Registry} />
                 <Footer/>
             </div>
-            );
+        );
     }
 }
 

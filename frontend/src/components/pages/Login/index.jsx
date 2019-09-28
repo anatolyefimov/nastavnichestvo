@@ -1,5 +1,7 @@
 import React from 'react';
 
+import login from 'api/login'
+
 import './Login.css'
 
 class Login extends React.Component{
@@ -9,6 +11,10 @@ class Login extends React.Component{
         this.state = {
             login: '',
             password: '',
+            logData : {
+                loggedIn: false,
+                userId: -1
+            }
         };
         this.onInputChange = this.onInputChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
@@ -19,10 +25,18 @@ class Login extends React.Component{
     }
 
     onSubmit() {
-        console.log(this.state.login, this.state.password);
+        login({
+            login: this.state.login,
+            password: this.state.password
+        })
+            .then(res => {
+
+            })
+
+
         this.setState(
             {login: '', password: '',}
-            );
+        );
     }
 
     render() {
