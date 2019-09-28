@@ -41,3 +41,9 @@
 .fa::before {
     color: black;
 }
+
+@media (max-width: 500px) {
+    .footer_link {
+        justify-content: flex-start;
+    }
+}

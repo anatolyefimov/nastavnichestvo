@@ -54,7 +54,7 @@ function Mentoring() {
                     <img src={el.logo} className="mentoring-item" alt=""/>
                 </div>
                 <h3 className="mentoring_item-title">{el.title}</h3>
-                <p className="mentoring-item">{el.description}</p>
+                <p className="mentoring-item__desc">{el.description}</p>
             </div>
         );
     });

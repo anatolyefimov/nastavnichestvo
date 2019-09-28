@@ -47,5 +47,13 @@
 }
 
 @media (max-width: 400px) {
-    
+    .mentoring-item {
+        border-bottom: 1px solid grey;
+    }
+    .mentoring-item:last-of-type {
+        border-bottom: none;
+    }
+    .mentoring-container_join-link {
+        font-size: .5em;
+    }
 }

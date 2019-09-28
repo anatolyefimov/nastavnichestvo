@@ -6,6 +6,7 @@ import Login from 'components/pages/Login'
 import Registry from 'components/pages/Registry'
 import Main from 'components/Main'
 import Footer from 'components/Footer'
+import Account from 'components/Account'
 
 class App extends React.Component {
     render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
             <div>
                 <Header/>
                 <Route path="/" exact component={Main} />
+                <Route path="/account" component={Account} />
                 <Route path="/login" component={Login} />
                 <Route path="/join" component={Registry} />
                 <Footer/>
