@@ -30,6 +30,7 @@ def register(request):
 @csrf_exempt
 def login(request):
     req = json.loads(request.body)
+    print(req)
     res = {
         'status': 'ok'
     }
@@ -39,7 +40,7 @@ def login(request):
         res['status'] = 'ivalid username or password'
     else:
         request.session['member_id'] = user.id
-        res['used_id'] = user.id
+        res['user_id'] = user.id
         
     res = json.dumps(res)
 
