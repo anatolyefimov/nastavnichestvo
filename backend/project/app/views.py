@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -10,6 +10,7 @@ import json
 
 @csrf_exempt
 def register(request): 
+    print(request.session)
     req = json.loads(request.body)
     res = {
         'status': 'already exists'
@@ -29,6 +30,7 @@ def register(request):
 @csrf_exempt
 def login(request):
     req = json.loads(request.body)
+    print(req)
     res = {
         'status': 'ok'
     }
@@ -36,7 +38,10 @@ def login(request):
     user = authenticate(username=req['username'], password=req['password'])
     if user is None:
         res['status'] = 'ivalid username or password'
-    
+    else:
+        request.session['member_id'] = user.id
+        res['user_id'] = user.id
+        
     res = json.dumps(res)
 
     return HttpResponse(res, content_type='application/json')

@@ -7,6 +7,7 @@ import Registry from 'components/pages/Registry'
 import Main from 'components/Main'
 import Footer from 'components/Footer'
 import Account from 'components/Account'
+import User from 'components/pages/User'
 
 class App extends React.Component {
     render() {
@@ -17,9 +18,11 @@ class App extends React.Component {
                 <Route path="/account" component={Account} />
                 <Route path="/login" component={Login} />
                 <Route path="/join" component={Registry} />
+                <Route path='/user/:id' component={User}/>
                 <Footer/>
+                
             </div>
-            );
+        );
     }
 }
 
