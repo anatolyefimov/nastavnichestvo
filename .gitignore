@@ -5,7 +5,7 @@
 /frontend/node_modules
 /frontend/build
 
-#backend
+#backen
 
 /backend/venv
 *.pyc 
@@ -16,4 +16,4 @@ db.sqlite3
 .idea/
 
 #jupyter
-*.ipynb
+.ipynb_checkpoints/
