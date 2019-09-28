@@ -1,0 +1,43 @@
+.footer {
+    height: 150px;
+    background-color: #575757;
+}
+
+.footer_link {
+    color: white;
+    text-decoration: none;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.footer_link:hover {
+    text-decoration: underline;
+}
+
+.img {
+    margin-right: 10px;
+}
+
+.footer_img {
+    align-self: center;
+}
+
+.footer_title__size-small {
+    font-size: 14px;
+}
+
+.footer_title-about__size-small {
+    font-size: 12px;
+}
+
+.fa:before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.fa::before {
+    color: black;
+}
